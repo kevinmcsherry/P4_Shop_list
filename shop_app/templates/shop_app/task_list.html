@@ -1,0 +1,14 @@
+<h1>My Shopping List</h1>
+
+<table>
+    <tr>
+        <th>List</th>
+    </tr>
+    {% for task in object_list %}
+    <tr>
+        <td>{{task.title}}</td>
+    </tr>
+    {% empty %}
+        <h3>No more items in Shopping List</h3>
+    {% endfor %}
+    </table>
