@@ -1,3 +1,12 @@
+
+{% if request.user.is_authenticated %}
+<p>{{request.user}}</p>
+<a href=''>Logout</a>
+{% else %}
+<a href=''>Login</a>
+{% endif %}
+
+<hr>
 <h1>My Shopping List</h1>
 
 <a href="{% url 'create-item' %}">Add a shopping item</a>
