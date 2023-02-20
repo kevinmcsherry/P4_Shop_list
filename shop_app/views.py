@@ -8,6 +8,7 @@ from .models import Task
 
 # Create your views here.
 
+
 class Login(LoginView):
     template_name = 'shop_app/login.html'
     fields = '__all__'
@@ -38,6 +39,7 @@ class TaskUpdate(UpdateView):
     model = Task
     fields = '__all__'
     success_url = reverse_lazy('tasks')
+
 
 class RemoveItem(DeleteView):
     model = Task
