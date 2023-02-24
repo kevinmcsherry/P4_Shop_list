@@ -21,6 +21,19 @@ class Login(LoginView):
         return reverse_lazy('tasks')
 
 
+class CreateAccount(FormView):
+    template_name = 'shop_app/create_account.html'
+    form_class = UserCreationForm
+    redirect_authenticated_user = True
+    success_url = reverse_lazy('tasks')
+
+    def form_valid(self, form):
+        user = form.save()
+        if user is not None:
+            login(self.request, user)
+        return super(CreateAccount, self).form_valid(form)
+
+
 class TaskList(LoginRequiredMixin, ListView):
     model = Task
     context_object_name = 'tasks'
