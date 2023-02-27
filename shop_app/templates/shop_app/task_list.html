@@ -1,3 +1,5 @@
+{% extends 'shop_app/main.html' %}
+{% block content %}
 
 {% if request.user.is_authenticated %}
 <p>{{request.user}}</p>
@@ -10,6 +12,12 @@
 <h1>My Shopping List</h1>
 
 <a href="{% url 'create-item' %}">Add a shopping item</a>
+
+<form method="GET">
+    <input type="text" name='Search-field' value="{{search_input}}">
+    <input type="submit" value='Search'>
+</form>
+
 <table>
     <tr>
         <th>List</th>
@@ -21,7 +29,6 @@
     {% for task in object_list %}
     <tr>
         <td>{{task.title}}</td>
-        <td><a href ="{% url 'task' task.id %}">View</a></td>
         <td><a href ="{% url 'edit-item' task.id %}">Update</a></td>
         <td><a href ="{% url 'remove-item' task.id %}">Remove</a></td>
     </tr>
@@ -30,3 +37,6 @@
         <h3>No more items in Shopping List</h3>
     {% endfor %}
     </table>
+
+{% endblock content %}
+

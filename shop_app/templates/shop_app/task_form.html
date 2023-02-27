@@ -1,3 +1,6 @@
+{% extends 'shop_app/main.html' %}
+{% block content %}
+
 <h1>Shopping List Form</h1>
 <a href="{% url 'tasks' %}"}>Back to List</a>
 <form method="POST" action="">
@@ -5,3 +8,5 @@
     {{form.as_p}}
 <input type ="submit" value ="Add">
 </form>
+
+{% endblock content %}
