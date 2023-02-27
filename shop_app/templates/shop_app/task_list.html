@@ -1,42 +1,57 @@
 {% extends 'shop_app/main.html' %}
 {% block content %}
 
+
+<div class="header-bar">
+    <div>
+        <h1>Hello {{request.user|title}}</h1>
+        <h3 style="margin:0">You have <i>{{count}}</i> items still to get</h3>
+    </div>
+
+
 {% if request.user.is_authenticated %}
-<p>{{request.user}}</p>
 <a href="{% url 'logout' %}">Logout</a>
 {% else %}
 <a href="{% url 'login' %}">Login</a>
 {% endif %}
 
-<hr>
-<h1>My Shopping List</h1>
+</div>
 
-<a href="{% url 'create-item' %}">Add a shopping item</a>
+
+
+
+<!--<a href="{% url 'create-item' %}">Add a shopping item</a>
 
 <form method="GET">
     <input type="text" name='Search-field' value="{{search_input}}">
     <input type="submit" value='Search'>
-</form>
+</form> -->
 
-<table>
-    <tr>
-        <th>List</th>
-        <th></th>
-        <th></th>
-        <th></th>
 
-    </tr>
-    {% for task in object_list %}
-    <tr>
-        <td>{{task.title}}</td>
-        <td><a href ="{% url 'edit-item' task.id %}">Update</a></td>
-        <td><a href ="{% url 'remove-item' task.id %}">Remove</a></td>
-    </tr>
-    </tr>
-    {% empty %}
+
+<div class="shop-items-wrapper">
+    {% for task in tasks %}
+        <div class="item-wrapper">
+            {% if task.complete %}
+            <div class="item-title">
+                <div class="item-complete-icon"></div>
+                <i><s><a href="{% url 'edit-item' task.id %}">{{task}}</a></s></i>
+            </div>
+            
+
+            {% else %}
+            <div class="item-title">
+                <div class="item-incomplete-icon"></div>
+                <a href="{% url 'edit-item' task.id %}">{{task}}</a>
+            </div>
+           
+            <a class="delete-link" href="{% url 'remove-item' task.id %}">&#215;</a>
+            {% endif %}
+        </div>
+        {% empty %}
         <h3>No more items in Shopping List</h3>
-    {% endfor %}
-    </table>
+        {% endfor %}
+</div>
 
 {% endblock content %}
 
