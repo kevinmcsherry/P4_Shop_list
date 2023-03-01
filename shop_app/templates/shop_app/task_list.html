@@ -36,8 +36,10 @@
             <div class="item-title">
                 <div class="item-complete-icon"></div>
                 <i><s><a href="{% url 'edit-item' task.id %}">{{task}}</a></s></i>
+                
             </div>
             
+            <a class="remove-item" href="{% url 'remove-item' task.id %}">&#215;</a>
 
             {% else %}
             <div class="item-title">
@@ -45,7 +47,7 @@
                 <a href="{% url 'edit-item' task.id %}">{{task}}</a>
             </div>
            
-            <a class="delete-link" href="{% url 'remove-item' task.id %}">&#215;</a>
+            <a class="remove-item" href="{% url 'remove-item' task.id %}">&#215;</a>
             {% endif %}
         </div>
         {% empty %}
