@@ -5,10 +5,14 @@
     <a href="{% url 'tasks' %}">&#8592; Back to list</a>
 </div>
 
-<form method="POST">
-{% csrf_token %}
-<p>Are you sure you want to remove this item?</p>
-<input class="button" type="submit" value="Remove"/>
-</form>
+<div class="card-body">
+    <form method="POST">
+    {% csrf_token %}
+    <p>Are you sure you want to remove this item?</p>
+    <input class="button" type="submit" value="Remove"/>
+    </form>
+</div>
+
+
 
 {% endblock content %}
