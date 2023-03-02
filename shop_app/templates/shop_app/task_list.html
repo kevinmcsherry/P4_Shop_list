@@ -5,7 +5,7 @@
 <div class="header-bar">
     <div>
         <h1>Hello {{request.user|title}}</h1>
-        <h3 style="margin:0">You have <i>{{count}}</i> items still to get</h3>
+        <h3 style="margin:0">Your shopping List</h3>
     </div>
 
 
@@ -18,14 +18,17 @@
 </div>
 
 
+<div id="search-add-wrapper">
+    <form method="GET" style="margin-top: 20px; display:flex">
+        <input type="text" name='Search-field' value="{{search_input}}">
+        <input class="button" type="submit" value='Search'>
+    </form> 
+    <a id="add-link" href="{% url 'create-item' %}">&#x2b;</a>
+</div>
 
 
-<!--<a href="{% url 'create-item' %}">Add a shopping item</a>
 
-<form method="GET">
-    <input type="text" name='Search-field' value="{{search_input}}">
-    <input type="submit" value='Search'>
-</form> -->
+
 
 
 

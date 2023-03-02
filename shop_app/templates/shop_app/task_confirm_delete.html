@@ -1,12 +1,14 @@
 {% extends 'shop_app/main.html' %}
 {% block content %}
 
-<a href="{% url 'tasks' %}">Back to List</a>
+<div class="header-bar">
+    <a href="{% url 'tasks' %}">&#8592; Back to list</a>
+</div>
 
 <form method="POST">
 {% csrf_token %}
 <p>Are you sure you want to remove this item?</p>
-<input type="submit" value="Remove"/>
+<input class="button" type="submit" value="Remove"/>
 </form>
 
 {% endblock content %}
