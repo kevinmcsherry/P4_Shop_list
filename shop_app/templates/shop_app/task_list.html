@@ -10,9 +10,9 @@
 
 
 {% if request.user.is_authenticated %}
-<a href="{% url 'logout' %}">Logout</a>
+<a style="font-size: large" href="{% url 'logout' %}">Logout</a>
 {% else %}
-<a href="{% url 'login' %}">Login</a>
+<a style="font-size: large" href="{% url 'login' %}">Login</a>
 {% endif %}
 
 </div>
@@ -38,16 +38,16 @@
         <div class="item-wrapper">
             {% if task.complete %}
             <div class="item-title">
-                <div class="item-complete-icon"></div>
+                <div class="item-complete-icon">&#10004;</div>
                 <i><s><a href="{% url 'edit-item' task.id %}">{{task}}</a></s></i>
                 
             </div>
             
-            <a class="remove-item" href="{% url 'remove-item' task.id %}">&#215;</a>
+            <a title="Remove Item" class="remove-item" href="{% url 'remove-item' task.id %}">&#215;</a>
 
             {% else %}
             <div class="item-title">
-                <div class="item-incomplete-icon"></div>
+                <div class="item-incomplete-icon">&#8212;</div>
                 <a href="{% url 'edit-item' task.id %}">{{task}}</a>
             </div>
            
