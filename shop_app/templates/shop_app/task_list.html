@@ -23,8 +23,9 @@
         <input type="text" name='Search-field' value="{{search_input}}">
         <input class="button" type="submit" value='Search'>
     </form> 
-    <a id="add-link" href="{% url 'create-item' %}">&#x2b;</a>
+    <a id="add-link" href="{% url 'create-item' %}"> Add Item </a>
 </div>
+<p style="text-align:center; font-weight: bold; color: black"; >Click Item to Edit</p>
 
 
 
@@ -50,7 +51,7 @@
                 <a href="{% url 'edit-item' task.id %}">{{task}}</a>
             </div>
            
-            <a class="remove-item" href="{% url 'remove-item' task.id %}">&#215;</a>
+            <a title="Remove Item" class="remove-item" href="{% url 'remove-item' task.id %}">&#215;</a>
             {% endif %}
         </div>
         {% empty %}
