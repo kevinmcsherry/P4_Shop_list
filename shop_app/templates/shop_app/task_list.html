@@ -2,6 +2,8 @@
 {% block content %}
 
 
+<header>
+
 <div class="header-bar">
     <div>
         <h1>Hello {{request.user|title}}</h1>
@@ -17,11 +19,16 @@
 
 </div>
 
+</header>
+
+
+<main>
 
 <div id="search-add-wrapper">
     <form method="GET" style="margin-top: 20px; display:flex">
-        <input type="text" name='Search-field' value="{{search_input}}">
-        <input class="button" type="submit" value='Search'>
+        <input type="text" name='Search-field' aria-label="Search" value="{{search_input}}">
+        <label for="search-button"></label>
+        <input class="button" type="submit" value='Search' name="search-button">
     </form> 
     <a id="add-link" href="{% url 'create-item' %}"> Add Item </a>
 </div>
@@ -58,6 +65,12 @@
         <h3>No more items in Shopping List</h3>
         {% endfor %}
 </div>
+
+</main>
+
+<footer>
+    
+</footer>
 
 {% endblock content %}
 

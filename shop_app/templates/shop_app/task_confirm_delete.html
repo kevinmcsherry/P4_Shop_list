@@ -1,9 +1,17 @@
 {% extends 'shop_app/main.html' %}
 {% block content %}
 
+
+
+<header>
+
 <div class="header-bar">
     <a href="{% url 'tasks' %}">&#8592; Back to list</a>
 </div>
+
+</header>
+
+<main>
 
 <div class="card-body">
     <form method="POST">
@@ -13,6 +21,11 @@
     </form>
 </div>
 
+</main>
+
+<footer>
+    
+</footer>
 
 
 {% endblock content %}

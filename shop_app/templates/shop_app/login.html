@@ -1,9 +1,16 @@
 {% extends 'shop_app/main.html' %}
 {% block content %}
 
+
+<header>
+
 <div class="header-bar">
     <h1>My Shopping List - Login</h1>
 </div>
+
+</header>
+
+<main>
 
 <div class="card-body">
     <form method="POST">
@@ -13,9 +20,13 @@
     </form>
 </div>
 
+</main>
 
+<footer>
 
 
 <p>Don't have an account? <a href="{% url 'create-account' %}">Create Account</a></p>
+
+</footer>
 
 {% endblock content %}
