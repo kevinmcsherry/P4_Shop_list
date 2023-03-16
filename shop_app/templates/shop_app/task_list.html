@@ -1,3 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Shopping List App">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping List</title>
+</head>
+</html>
+
 {% extends 'shop_app/main.html' %}
 {% block content %}
 
@@ -28,11 +39,11 @@
     <form method="GET" style="margin-top: 20px; display:flex">
         <input type="text" name='Search-field' aria-label="Search" value="{{search_input}}">
         <label for="search-button"></label>
-        <input class="button" type="submit" value='Search' name="search-button">
+        <input class="button" type="submit" value='Search' id="search-button" name="search-button">
     </form> 
     <a id="add-link" href="{% url 'create-item' %}"> Add Item </a>
 </div>
-<p style="text-align:center; font-weight: bold; color: black"; >Click Item to Edit</p>
+<p style="text-align:center; font-weight: bold; color: black" >Click Item to Edit</p>
 
 
 
