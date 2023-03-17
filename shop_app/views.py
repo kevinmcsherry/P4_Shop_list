@@ -6,20 +6,21 @@ from django.urls import reverse_lazy
 from django.contrib.auth.views import LoginView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth import login
 from .models import Task
 
 
 # Create your views here.
 
-class Login(LoginView):
+class Login(SuccessMessageMixin, LoginView):
     template_name = 'shop_app/login.html'
     fields = '__all__'
     redirect_authenticated_user = True
-
+    
     def get_success_url(self):
         return reverse_lazy('tasks')
-
+        
 
 class CreateAccount(FormView):
     template_name = 'shop_app/create_account.html'
