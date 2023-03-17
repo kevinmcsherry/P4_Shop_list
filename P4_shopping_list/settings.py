@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 import os
 import dj_database_url
+from django.contrib.messages import constants as messages
 if os.path.isfile('env.py'):
     import env
 
@@ -57,6 +58,14 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'P4_shopping_list.urls'
 
+MESSAGE_TAGS = {
+        messages.DEBUG: 'alert-info',
+        messages.INFO: 'alert-info',
+        messages.SUCCESS: 'alert-success',
+        messages.WARNING: 'alert-warning',
+        messages.ERROR: 'alert-danger',
+    }
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -94,16 +103,20 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        'NAME': 'django.contrib.auth.password_validation.\
+            UserAttributeSimilarityValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'NAME': 'django.contrib.auth.password_validation.\
+            MinimumLengthValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+        'NAME': 'django.contrib.auth.password_validation.\
+            CommonPasswordValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+        'NAME': 'django.contrib.auth.password_validation.\
+            NumericPasswordValidator',
     },
 ]
 

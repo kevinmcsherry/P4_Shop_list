@@ -28,13 +28,11 @@
 <form method="POST">
     {% csrf_token %}
     <label style="font-size: large;">{{form.username.label}}</label>
-    <label for="username">{{form.username}}</label>
-
+    
     <label style="font-size: large;">{{form.password1.label}}</label>
-    <label for="password">{{form.password1}}</label>
 
     <label style="font-size: large;">{{form.password2.label}}</label>
-    <label for="password2">{{form.password2}}</label>
+    
     <input style="margin-top: 10px; font-size: large; font-weight: bolder;" class="button" type="submit" value="Submit">
 </form>
 </div>
