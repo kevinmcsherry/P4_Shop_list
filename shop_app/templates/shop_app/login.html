@@ -12,8 +12,17 @@
 {% extends 'shop_app/main.html' %}
 {% block content %}
 
+<div class="notification">
+    {% for message in messages %}
+    <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
+        {{ message | safe }}
+    </div>
+    {% endfor %}
+</div>
+
 
 <header>
+
 
 <div class="header-bar">
     <h1>My Shopping List - Login</h1>
@@ -24,6 +33,7 @@
 <main>
 
 <div class="card-body">
+
     <form method="POST">
         {% csrf_token %}
         {{form.as_p}}

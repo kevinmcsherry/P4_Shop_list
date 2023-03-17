@@ -58,13 +58,6 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'P4_shopping_list.urls'
 
-MESSAGE_TAGS = {
-        messages.DEBUG: 'alert-info',
-        messages.INFO: 'alert-info',
-        messages.SUCCESS: 'alert-success',
-        messages.WARNING: 'alert-warning',
-        messages.ERROR: 'alert-danger',
-    }
 
 TEMPLATES = [
     {

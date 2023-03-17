@@ -7,13 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping List</title>
 </head>
-</html>
+
 
 {% extends 'shop_app/main.html' %}
 {% block content %}
 
+<div class="notification">
+            {% for message in messages %}
+            <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
+                {{ message | safe }}
+            </div>
+            {% endfor %}
+</div>
 
 <header>
+
 
 <div class="header-bar">
     <div>
@@ -46,11 +54,6 @@
 <p style="text-align:center; font-weight: bold; color: black" >Click Item to Edit</p>
 
 
-
-
-
-
-
 <div class="shop-items-wrapper">
     {% for task in tasks %}
         <div class="item-wrapper">
@@ -77,11 +80,16 @@
         {% endfor %}
 </div>
 
-</main>
+
 
 <footer>
     
 </footer>
+
+
+</main>
+
+</html>
 
 {% endblock content %}
 

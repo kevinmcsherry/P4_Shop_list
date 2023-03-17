@@ -46,6 +46,19 @@
             box-shadow: 2px 2px 13px -4px rgba(0, 0, 0, 1);
         }
 
+        @keyframes example {
+        from {background-color: red;}
+        to {background-color: yellow;}
+        }
+
+        .notification {
+            color:black;
+            text-align: center;
+            top: 1rem;
+            animation-name: example;
+            animation-duration: 4s;
+        }
+
         .header-bar {
             display:flex;
             justify-content: space-between;

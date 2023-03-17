@@ -7,6 +7,7 @@ from django.contrib.auth.views import LoginView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.messages.views import SuccessMessageMixin
+from django.contrib import messages
 from django.contrib.auth import login
 from .models import Task
 
@@ -17,15 +18,17 @@ class Login(SuccessMessageMixin, LoginView):
     template_name = 'shop_app/login.html'
     fields = '__all__'
     redirect_authenticated_user = True
+    success_message = "Login Successful"
     
     def get_success_url(self):
         return reverse_lazy('tasks')
         
 
-class CreateAccount(FormView):
+class CreateAccount(SuccessMessageMixin, FormView):
     template_name = 'shop_app/create_account.html'
     form_class = UserCreationForm
     redirect_authenticated_user = True
+    success_message = "Account Created Successfully"
     success_url = reverse_lazy('tasks')
 
     def form_valid(self, form):
@@ -62,9 +65,10 @@ class TaskDetail(LoginRequiredMixin, DetailView):
     template_name = 'shop_app/shop_list.html'
 
 
-class TaskCreate(LoginRequiredMixin, CreateView):
+class TaskCreate(SuccessMessageMixin, LoginRequiredMixin, CreateView):
     model = Task
     fields = ['title', 'description', 'complete']
+    success_message = "Item Added Successfully"
     success_url = reverse_lazy('tasks')
 
     def form_valid(self, form):
@@ -72,13 +76,15 @@ class TaskCreate(LoginRequiredMixin, CreateView):
         return super(TaskCreate, self).form_valid(form)
 
 
-class TaskUpdate(LoginRequiredMixin, UpdateView):
+class TaskUpdate(SuccessMessageMixin, LoginRequiredMixin, UpdateView):
     model = Task
     fields = ['title', 'description', 'complete']
+    success_message = "Item updated successfully"
     success_url = reverse_lazy('tasks')
 
 
-class RemoveItem(LoginRequiredMixin, DeleteView):
+class RemoveItem(SuccessMessageMixin, LoginRequiredMixin, DeleteView):
     model = Task
+    success_message = "Item Removed Successfully"
     context_object_name = 'task'
     success_url = reverse_lazy('tasks')
