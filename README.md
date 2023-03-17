@@ -10,3 +10,40 @@ Security is also in mind when devloping this application, aloowing only looged i
 I think you will agree, that this application is a very useful and easy to use tool to help many shoppers!
 
 ![Web Page view](assets/images/Shop%20List.png)
+
+# Features
+
+There are many features included in the shopping list application.
+
+- __Secured Credentials__
+    - A user must have login credentials to use the site
+    - With login credentials, a user can only view thier own details
+    - There is a create account function to allow users without login to create one and use site straight away.
+
+<br>
+
+- __Easy Navigation__
+    - A user can easily navigate through the site via clear links and one click utilisation.
+    - Pages are clear and concise, with no confusion
+    - Clear instruction on options to add/edit/remove items from list.
+
+<br>
+
+- __Hover Over__
+    - All links have a hover over function, that clearly identifes the options by highlighting in a different colour.  This adds to the user experience also.
+    
+<br>
+
+
+- __Strike Through__
+    - When an item is complete, the shooping list will clearly identify this by striking through the item - clearly allowing the user to see what is no longer required to purchase.
+
+<br>
+
+- __Descriptions__
+    - An option to add an item description to allow the user to identify an amount, a brand or any other instructions to remind them of particulars to any item on list.
+
+<br>
+
+- __Mobile Friendly__
+    - Application is very device friendly.  This is very important for this app in particular to allow users to use on the go, when at shops for exmaple. 
