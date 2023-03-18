@@ -25,10 +25,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = os.environ.get('SECRET_KEY')
-SECRET_KEY = "^km0nhwn9coa68lwr30kvp(1qiml8za%z5gwl163l0@+n*-om7"
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
-ALLOWED_HOSTS = ['shop-listp4.herokuapp.com']
+ALLOWED_HOSTS = [os.environ.get('HEROKU_HOSTNAME')]
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -88,9 +87,8 @@ WSGI_APPLICATION = 'P4_shopping_list.wsgi.application'
 #}
 
 DATABASES = {
-   'default': dj_database_url.parse('postgres://fmfbvkqm:Ineh91erXRV3F-Ngrw0QiadRJ8M9mWCb@mel.db.elephantsql.com/fmfbvkqm')
+    'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
 }
-
 
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
