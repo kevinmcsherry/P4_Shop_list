@@ -28,12 +28,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECRET_KEY = os.environ.get('SECRET_KEY')
 SECRET_KEY = "^km0nhwn9coa68lwr30kvp(1qiml8za%z5gwl163l0@+n*-om7"
 
+ALLOWED_HOSTS = ['shop-listp4.herokuapp.com']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
-ALLOWED_HOSTS = []
-
 
 # Application definition
 
