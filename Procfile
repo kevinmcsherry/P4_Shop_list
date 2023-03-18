@@ -1,1 +1,1 @@
-web: gunicorn P4_SHOP_LIST.wsgi:application
+web: gunicorn P4_Shop_list.wsgi:application
