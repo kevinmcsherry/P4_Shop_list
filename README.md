@@ -112,6 +112,8 @@ There are many features included in the shopping list application.
  - Similar to the previous issue - I feel that the messaging isn't great, not quite a bug, but something a customer might report as not a great experience.  I would really prefer to have this as a pop up message that then dissapears after time, instead of remaining on screen until next action.
 <br>
 
+- Unable to trigger a message to identify the removal of an item.  No message appears when this action is taken.  I hope I have left enough time to try and rectify this problem
+
 - One big issue! If I do not logout of the application, then spin it back up again, I seem to still be logged in as last user.  I couldn't quite find a way to make sure that by closing the session out that it would also log a user out.  This is a problem.  As I write this, I'm allowing myself time to see if I can fix this...but as of now, this is a bug!
 
 
@@ -121,6 +123,9 @@ There are many features included in the shopping list application.
 - My project is deployed via Heroku.  My live published site - 
 - My GitHub repository is housed here - https://github.com/kevinmcsherry/P4_Shop_list 
 <br>
+
+# Shopping List User
+- My Admin user Credentials for the shopping list app : - Username - kevmac  Password - shop1234
 
 # Credits
 
