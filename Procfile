@@ -1,1 +1,1 @@
-web: gunicorn django_todo.wsgi:application
+web: gunicorn django_P4_SHOP_LIST.wsgi:application
