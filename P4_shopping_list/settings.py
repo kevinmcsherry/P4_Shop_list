@@ -36,7 +36,7 @@ ALLOWED_HOSTS = ['shopping-listp4.herokuapp.com', 'localhost']
 # ALLOWED_HOSTS = os.environ.get('HEROKU_HOSTNAME')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = development
+DEBUG = os.environ.get('DEVELOPMENT')
 
 # Application definition
 
