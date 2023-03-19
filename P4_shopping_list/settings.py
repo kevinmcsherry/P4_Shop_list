@@ -33,7 +33,7 @@ ALLOWED_HOSTS = ['shopping-listp4.herokuapp.com', 'localhost']
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 
 # Application definition
