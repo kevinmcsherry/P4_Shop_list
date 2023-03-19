@@ -15,6 +15,11 @@ I think you will agree, that this application is a very useful and easy to use t
 - A big part of this project was to think ahead and plan, design, prioritise and timebox tasks.  It was a great way to make me think about smaller chunks of work and plan out my project.
 - By more planning I felt that I could conceptulise and not get too far ahead, allowing me to focus on certain items of delivery, step by step, not to just focus on end result. 
 - I learned how to use this via github and to break tasks down into manageable chunks of work, and again to focus on these as MVP vs everything I'd like to deliver. 
+- CRUD - I've designed, planned and executed all of the CRUD functions.  My application allows a user to:-
+    - Create - New Accounts, new shopping items
+    - Read - Information is collected and stored, and is made readable on UI via the database. 
+    - Update - Current stored data can be changed and updated, and again made visible on UI via database.
+    - Delete - Stored information can also be deleted.  This information is then rendered on UI via database.
  
 
 # Features
