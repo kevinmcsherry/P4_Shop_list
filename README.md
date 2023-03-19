@@ -124,8 +124,8 @@ There are many features included in the shopping list application.
 
 # Deployment
 
-- In order to deploy my project and make it available to run via a visual program, I needed to synch my GitHub project through Heroku.  I had to sign up for a new account, add credentials, link to the correct repository and add some settings to allow for seemless deployment.  One thing I made sure to do was set to automatic deploys, which meant each time I pushed through gitpod, these changes would then render to the new GUI. My Heroku dashboard - 
-- My project is deployed via Heroku.  My live published site - 
+- In order to deploy my project and make it available to run via a visual program, I needed to synch my GitHub project through Heroku.  I had to sign up for a new account, add credentials, link to the correct repository and add some settings to allow for seemless deployment.  One thing I made sure to do was set to automatic deploys, which meant each time I pushed through gitpod, these changes would then render to the new GUI.
+- My project is deployed via Heroku.  My live published site - https://shopping-listp4.herokuapp.com/
 - My GitHub repository is housed here - https://github.com/kevinmcsherry/P4_Shop_list 
 <br>
 
